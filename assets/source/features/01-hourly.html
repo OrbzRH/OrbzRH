@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../base.css"><link rel="stylesheet" href="feat.css">
+<style>
+ .panel { padding: 40px 44px; width: 620px; }
+ .row { display: grid; grid-template-columns: 110px 1fr 90px; align-items: center; gap: 18px; margin: 22px 0; font-family: "JetBrains Mono", monospace; font-size: 17px; color: var(--vein); }
+ .bar { height: 14px; background: var(--ink-3); position: relative; }
+ .bar span { position: absolute; inset: 0 auto 0 0; background: linear-gradient(90deg, #e2d0c2, #fbf0e3); }
+ .row b { color: var(--marble-light); font-weight: 500; text-align: right; }
+ .clock { display: flex; gap: 6px; margin-bottom: 30px; }
+ .clock i { flex: 1; height: 26px; border: 1px solid var(--line); }
+ .clock i.on { background: rgba(189,142,107,.35); }
+ .clock i.now { background: var(--ember); box-shadow: 0 0 16px rgba(255,122,26,.7); border-color: var(--ember); }
+ .cap { display: flex; justify-content: space-between; margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); font-family: "JetBrains Mono", monospace; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
+</style></head><body><div class="wrap" style="grid-template-columns: 1fr 760px; background: url(../art/trails.webp) center/cover;">
+ <div class="art" style="position:absolute;inset:0;background:none"></div>
+ <div class="copy"><div class="eyebrow">Feature 01 · Hourly credits</div>
+  <h2>Credits arrive <em>every hour.</em></h2>
+  <p class="lead">Each epoch, the credit pool is shared out to holders above 100,000 $ORBZ, pro-rata to their time-weighted balance. No claim button. No staking.</p></div>
+ <div class="panel plate"><i class="tick-b"></i>
+  <div class="eyebrow" style="margin-bottom:18px">Epoch · one clock hour</div>
+  <div class="clock"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="now"></i></div>
+  <div class="row"><span>wallet A</span><div class="bar"><span style="width:100%"></span></div><b>50%</b></div>
+  <div class="row"><span>wallet B</span><div class="bar"><span style="width:60%"></span></div><b>30%</b></div>
+  <div class="row"><span>wallet C</span><div class="bar"><span style="width:40%"></span></div><b>20%</b></div>
+  <div class="cap"><span>time-weighted</span><span>floor 100k $ORBZ</span></div>
+ </div>
+ <div class="foot"><i></i><b>orbz.app</b><span>use.orbz.app</span><span>@OrbzRH</span><span>$ORBZ</span></div><div class="frame plate"><i class="tick-b"></i></div>
+</div></body></html>

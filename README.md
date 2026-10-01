@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="assets/banner.png" alt="Orbz ($ORBZ): Use it, or it burns. Hold $ORBZ and trading fees pay for your AI every hour." width="100%" />
+<img src="assets/banner.png" alt="Orbz ($ORBZ): Use it, or it burns. Hold $ORBZ and trading fees pay for your AI every 30 minutes." width="100%" />
 
 <br/>
 
 [![Chain](https://img.shields.io/badge/Robinhood%20Chain-4663-BD8E6B?style=for-the-badge&labelColor=141312)](https://robin.etherscan.io)
-[![Token](https://img.shields.io/badge/%24ORBZ-not%20launched-FF7A1A?style=for-the-badge&labelColor=141312)](#token-at-a-glance)
+[![Token](https://img.shields.io/badge/%24ORBZ-live-FF7A1A?style=for-the-badge&labelColor=141312)](https://robin.etherscan.io/token/0x6a043193D37872A958aAbbC0C7221541f5661BD0)
 [![Supply](https://img.shields.io/badge/supply-1%2C000%2C000%2C000%20fixed-FBF0E3?style=for-the-badge&labelColor=141312)](#token-at-a-glance)
 
 [![Vault](https://img.shields.io/badge/OrbzVault-no%20owner%20%C2%B7%20no%20upgrade-BD8E6B?style=flat-square&labelColor=141312)](#features)
@@ -20,7 +20,7 @@
 
 ## What is Orbz
 
-Every hour, $ORBZ trading fees become AI credits for holders, spendable on every major model with one API key. Credits
+Every 30 minutes, $ORBZ trading fees become AI credits for holders, spendable on **Orbz Opus** with one API key. Credits
 idle for seven days are swapped into $ORBZ and burned on-chain, with a public receipt for each burn. A holder who codes
 all day gets free AI. A holder who never opens the app still gains, because every idle credit becomes a
 buyback-and-burn.
@@ -41,18 +41,19 @@ idle majority into the burn.
 
 | Feature | What you get |
 |---|---|
-| **Hourly credits** | Every epoch, the credit pool is shared out to holders above the floor, pro-rata to their time-weighted balance. No claim button, no staking. |
-| **One key, every model** | Sign in with your wallet, mint an `sk-orbz-...` key, and point any chat-completions client at `api.orbz.app/v1`. Streaming supported. |
+| **Credits every 30 minutes** | Every epoch, the credit pool is shared out to holders above the floor, pro-rata to their time-weighted balance. No claim button, no staking. |
+| **Orbz Opus** | Orbz's own model: fast and general purpose, for writing, code and analysis in any language. $0.30 in and $2.50 out per million tokens, no markup. |
+| **One key** | Sign in with your wallet, mint an `sk-orbz-...` key, and point any chat-completions client at `api.orbz.app/v1` with model `orbz-opus`. Streaming supported. |
 | **The fuse** | Each grant is a bucket that burns 168 hours after its epoch. Spending drains the oldest bucket first, and the dashboard shows what burns next. |
-| **Playground** | Chat with the models inside the console, billed from the same credits, capped per day. |
+| **Playground** | Chat with Orbz Opus inside the console, billed from the same credits, capped per day. |
 | **Usage and badges** | Request log, spend chart, totals per model, and badges earned from settled usage. |
 | **"$0 AI bill" card** | A shareable card drawn from your real usage, on a link you can revoke. |
 | **Burn receipts** | One public receipt per epoch: credit granted, spent and burned, in JSON or CSV. |
 | **Reserves** | The vault's USDG checked against every outstanding credit, one to one. |
 | **Safe sign-in** | A signed message, never a transaction. Keys are minted by the server and stored only as a hash; rotate or revoke them at any time. |
 
-> The console is live in **sandbox mode** at [use.orbz.app](https://use.orbz.app): test credits from a faucet and an
-> echo model, every screen labelled. Real grants, models and burns start when $ORBZ launches.
+> **Live** at [use.orbz.app](https://use.orbz.app) since epoch 0 (2026-10-01 18:00 UTC): credits every 30 minutes for
+> holders of 100,000 $ORBZ or more, Orbz Opus on one key, and unused credit bought back and burned after seven days.
 
 ## Highlights
 
@@ -62,11 +63,11 @@ idle majority into the burn.
 |---|---|
 | Trading fee | 2% (1% launchpad base + 1% creator tax) |
 | Reaches OrbzVault | 1.7% of every trade, before and after graduation |
-| Vault split | 70% hourly credit pool (USDG) / 30% treasury |
-| Epoch | One clock hour, numbered from launch |
+| Vault split | 70% credit pool (USDG, booked every epoch) / 30% treasury |
+| Epoch | 30 minutes, numbered from launch (epoch 0 = 2026-10-01 18:00 UTC) |
 | Credit | $1.00 of model usage at list price, tied to the wallet, valid 168 hours |
 | Spending order | FIFO: the oldest credit burns first, fresh credit is never lost to an old fuse |
-| Share | Pro-rata to the hourly time-weighted balance; floor 100,000 $ORBZ |
+| Share | Pro-rata to the time-weighted balance over the epoch; floor 100,000 $ORBZ |
 | Burn | After 168 hours: USDG → ETH → $ORBZ → `burn()`, 0.25% caller tip capped at $2 |
 | Price guard | Every swap reverts beyond 3% from a 30-minute TWAP |
 
@@ -86,14 +87,14 @@ Allocation is strictly pro-rata. Tiers only raise rate limits and unlock cosmeti
 
 | Tier | Hold | Unlocks |
 |---|---|---|
-| Visitor | 0 | 20 demo messages a day on a small model; receipts, reserves, docs |
-| Orbit | 100,000 $ORBZ (0.01%) | Hourly credit grants, 60 requests/min, 8 concurrent, usage and fuse dashboard |
+| Visitor | 0 | No new credits; credit already held stays spendable (10 requests/min, 2 concurrent); receipts, reserves, docs |
+| Orbit | 100,000 $ORBZ (0.01%) | Credit grants every 30 minutes, 60 requests/min, 8 concurrent, usage and fuse dashboard |
 | Ring | 1,000,000 $ORBZ (0.1%) | Everything in Orbit, 120 requests/min, 16 concurrent, Ring badge |
 | Sun | 10,000,000 $ORBZ (1%) | Everything in Ring, 240 requests/min, 32 concurrent, first look at new models, holder wall |
 
 ## Token at a Glance
 
-<p align="center"><img src="assets/token.png" alt="1,000,000,000 $ORBZ fixed supply, 100% fair launch, OrbzVault as fee recipient, not launched yet" width="100%" /></p>
+<p align="center"><img src="assets/token.png" alt="1,000,000,000 $ORBZ fixed supply, 100% fair launch, OrbzVault as fee recipient, live on Robinhood Chain" width="100%" /></p>
 
 | Fact | Value |
 |---|---|
@@ -105,7 +106,7 @@ Allocation is strictly pro-rata. Tiers only raise rate limits and unlock cosmeti
 | Team allocation, presale, private round | None |
 | Dev buy | At most 2% of supply, disclosed with the wallet address before launch |
 | Fee recipient | OrbzVault from block one: no owner, no upgrade, source verified |
-| Status | **Not launched.** No contract address exists yet |
+| Status | **Live.** Contract address `0x6a043193D37872A958aAbbC0C7221541f5661BD0` ([explorer](https://robin.etherscan.io/token/0x6a043193D37872A958aAbbC0C7221541f5661BD0)) |
 
 ## Tech Stack
 
@@ -127,7 +128,7 @@ Allocation is strictly pro-rata. Tiers only raise rate limits and unlock cosmeti
 |---|---|---|
 | 0 · Foundation | done | Concept locked; name, domain and handle chosen; official logo and brand kit |
 | 1 · MVP | weeks 1 to 3 | Landing page with docs, receipts and reserves; gateway with keys by signature and FIFO grants; indexer and allocator on a mainnet fork; OrbzVault fork-tested against I1 to I7; keeper and publisher; demo chat |
-| 2 · Launch + growth | weeks 4 to 8 | Vault as fee recipient from block one; hourly receipts and first-burn countdown; "$0 AI bill" cards, Free-AI board, Ember wall; MCP server; paid top-ups for non-holders (5% margin burns); weekly public report |
+| 2 · Launch + growth | weeks 4 to 8 | Vault as fee recipient from block one; per-epoch receipts and first-burn countdown; "$0 AI bill" cards, Free-AI board, Ember wall; MCP server; paid top-ups for non-holders (5% margin burns); weekly public report |
 | 3 · Scale | months 3 to 6 | Sub-keys with spend caps; web search and scraping on the same credits; redundant upstream providers; third-party review of OrbzVault; usage-root verifier |
 | 4 · Ecosystem | months 6 to 12 | Orbz keys as a payment rail; fee-to-credit partnerships with Robinhood Chain projects; agent SDK with budget planning; governance of the next vault's parameters |
 
@@ -148,11 +149,11 @@ Allocation is strictly pro-rata. Tiers only raise rate limits and unlock cosmeti
 ## Scam Warning
 
 > [!WARNING]
-> **$ORBZ has not launched.** Any contract address posted before launch is fake.
+> **The only $ORBZ contract address is `0x6a043193D37872A958aAbbC0C7221541f5661BD0`.** Any other address is fake.
 >
 > - There is **no presale, no private round and no whitelist**. Anyone offering one is running a scam.
-> - The official contract address will appear on [orbz.app](https://orbz.app), on the reserves page and on
->   [@OrbzRH](https://x.com/OrbzRH) at the same moment. Check every character.
+> - The official contract address is shown on [orbz.app](https://orbz.app) and on [@OrbzRH](https://x.com/OrbzRH).
+>   Check every character before you buy.
 > - Orbz never sends direct messages first, never asks for a seed phrase or private key, and never asks you to sign
 >   anything outside [use.orbz.app](https://use.orbz.app). Signing in there is a message, never a transaction.
 > - Anything from a stranger is a scam. When in doubt, go to orbz.app yourself.

@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../base.css"><link rel="stylesheet" href="feat.css">
+<style>
+ .panel { width: 620px; padding: 42px 46px; }
+ .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-bottom: 1px solid var(--line); }
+ .pair div { padding: 6px 0 28px; }
+ .pair div + div { padding-left: 34px; border-left: 1px solid var(--line); }
+ .pair span { font-family: "JetBrains Mono", monospace; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); }
+ .pair b { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 52px; margin-top: 10px; }
+ .diff { display: flex; justify-content: space-between; align-items: baseline; padding-top: 26px; }
+ .diff span { font-family: "JetBrains Mono", monospace; font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: var(--vein); }
+ .diff b { font-family: "Fraunces", serif; font-weight: 400; font-size: 60px; color: var(--ember); text-shadow: 0 0 24px rgba(255,122,26,.45); }
+ .ok { margin-top: 22px; font-family: "JetBrains Mono", monospace; font-size: 15px; color: var(--marble); }
+ .ok i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--ember); margin-right: 10px; box-shadow: 0 0 10px var(--ember); }
+</style></head><body><div class="wrap">
+ <div class="art" style="position:absolute;inset:0;background-image:url(../art/vault.webp);background-position:75% center"></div>
+ <div class="copy"><div class="eyebrow">Feature 04 · Reserves</div>
+  <h2>Every credit, <em>backed one to one.</em></h2>
+  <p class="lead">The reserves page checks the vault's USDG against every outstanding credit in every dashboard. If the two numbers ever drift, you see it first.</p></div>
+ <div class="panel plate"><i class="tick-b"></i>
+  <div class="pair"><div><span>Vault USDG</span><b>$ 1,190</b></div><div><span>Open credits</span><b>$ 1,190</b></div></div>
+  <div class="diff"><span>difference</span><b>$0.00</b></div>
+  <div class="ok"><i></i>reserves = credits · sample figures</div>
+ </div>
+ <div class="foot"><i></i><b>orbz.app</b><span>use.orbz.app</span><span>@OrbzRH</span><span>$ORBZ</span></div><div class="frame plate"><i class="tick-b"></i></div>
+</div></body></html>

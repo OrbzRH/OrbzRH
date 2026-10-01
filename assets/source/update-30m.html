@@ -1,0 +1,89 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { height: 900px; }
+  .wrap { position: relative; width: 1600px; height: 900px; overflow: hidden; }
+  .bg { position: absolute; inset: 0; background: url(art/hero.webp) center 60% / cover; }
+  .shade { position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(20,19,18,.97) 0%, rgba(20,19,18,.9) 48%, rgba(20,19,18,.55) 75%, rgba(20,19,18,.45) 100%),
+                linear-gradient(0deg, rgba(20,19,18,.92) 0%, rgba(20,19,18,0) 40%); }
+  .frame { position: absolute; inset: 30px; }
+  .copy { position: absolute; left: 100px; top: 96px; width: 860px; }
+  .pill { display: inline-flex; align-items: center; gap: 12px; font-family: "JetBrains Mono", monospace; font-size: 17px;
+    letter-spacing: .22em; color: var(--ember); border: 1px solid rgba(255,122,26,.6); padding: 9px 18px; border-radius: 999px; }
+  .pill i { width: 10px; height: 10px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 16px var(--ember); }
+  h1 { font-family: "Fraunces", serif; font-weight: 600; font-size: 108px; line-height: .98; letter-spacing: -0.025em; margin-top: 34px; }
+  h1 em { font-style: italic; font-weight: 400; color: var(--ember); }
+  .was { font-family: "JetBrains Mono", monospace; font-size: 22px; color: var(--vein); margin-top: 26px; letter-spacing: .04em; }
+  .was s { color: var(--dust, #8a7b6e); text-decoration-color: var(--ember); text-decoration-thickness: 2px; }
+  .was b { color: var(--marble-light); font-weight: 500; }
+  .facts { margin-top: 40px; width: 820px; }
+  .fact { display: grid; grid-template-columns: 70px 1fr; align-items: baseline; padding: 15px 0; border-top: 1px solid rgba(189,142,107,.25); }
+  .fact .n { font-family: "JetBrains Mono", monospace; font-size: 15px; letter-spacing: .18em; color: var(--brass); }
+  .fact .t { font-size: 24px; color: var(--marble-light); }
+  .fact .t b { font-weight: 600; }
+  .dial { position: absolute; right: 120px; top: 150px; width: 520px; height: 520px; }
+  .foot { position: absolute; left: 100px; right: 100px; bottom: 78px; display: flex; justify-content: space-between; align-items: end;
+    font-family: "JetBrains Mono", monospace; }
+  .foot .k { font-size: 14px; letter-spacing: .22em; color: var(--brass); margin-bottom: 8px; }
+  .foot .v { font-size: 22px; color: var(--marble-light); }
+  .foot .links { font-size: 17px; color: var(--vein); text-align: right; line-height: 1.7; letter-spacing: .06em; }
+  .foot .links b { color: var(--marble-light); font-weight: 500; }
+</style></head>
+<body><div class="wrap grain">
+  <div class="bg"></div><div class="shade"></div>
+  <div class="frame plate"><i class="tick-b"></i></div>
+  <div class="copy">
+    <div class="pill"><i></i>ORBZ UPDATE</div>
+    <h1>Credits now land every <em>30 minutes.</em></h1>
+    <div class="was"><s>once an hour</s> &nbsp;→&nbsp; <b>twice an hour, at :00 and :30</b></div>
+    <div class="facts">
+      <div class="fact"><span class="n">01</span><span class="t">Same <b>pro-rata share</b>, same <b>100,000 $ORBZ</b> floor</span></div>
+      <div class="fact"><span class="n">02</span><span class="t">Same <b>7-day fuse</b>: unused credit is bought back and burned</span></div>
+      <div class="fact"><span class="n">03</span><span class="t">Balance sampled <b>every minute</b>, so a quick flip barely counts</span></div>
+    </div>
+  </div>
+
+  <svg class="dial" viewBox="0 0 520 520">
+    <defs>
+      <radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FF7A1A" stop-opacity=".22"/><stop offset="70%" stop-color="#FF7A1A" stop-opacity="0"/></radialGradient>
+    </defs>
+    <circle cx="260" cy="260" r="250" fill="url(#g)"/>
+    <circle cx="260" cy="260" r="200" fill="rgba(20,19,18,.55)" stroke="#BD8E6B" stroke-opacity=".5" stroke-width="2"/>
+    <circle cx="260" cy="260" r="168" fill="none" stroke="#BD8E6B" stroke-opacity=".2" stroke-width="1"/>
+    <!-- minute ticks -->
+    <g stroke="#CCB098">
+      <!-- 60 ticks generated inline -->
+      <line x1="260" y1="66" x2="260" y2="82" stroke-opacity=".9" stroke-width="3"/>
+    </g>
+    <g id="ticks"></g>
+    <!-- the two halves of the hour -->
+    <path d="M260 60 A200 200 0 0 1 260 460" fill="none" stroke="#FF7A1A" stroke-width="8" stroke-linecap="round" opacity=".95"/>
+    <path d="M260 460 A200 200 0 0 1 260 60" fill="none" stroke="#BD8E6B" stroke-width="8" stroke-linecap="round" opacity=".85"/>
+    <!-- grant points -->
+    <circle cx="260" cy="60" r="16" fill="#FF7A1A"/><circle cx="260" cy="60" r="28" fill="#FF7A1A" opacity=".2"/>
+    <circle cx="260" cy="460" r="16" fill="#FF7A1A"/><circle cx="260" cy="460" r="28" fill="#FF7A1A" opacity=".2"/>
+    <text x="260" y="118" text-anchor="middle" font-family="JetBrains Mono" font-size="26" fill="#FBF0E3">:00</text>
+    <text x="260" y="420" text-anchor="middle" font-family="JetBrains Mono" font-size="26" fill="#FBF0E3">:30</text>
+    <text x="260" y="262" text-anchor="middle" font-family="Fraunces" font-size="96" font-weight="600" fill="#FBF0E3">2×</text>
+    <text x="260" y="304" text-anchor="middle" font-family="JetBrains Mono" font-size="17" letter-spacing="4" fill="#CCB098">GRANTS AN HOUR</text>
+  </svg>
+
+  <div class="foot">
+    <div><div class="k">$ORBZ · ROBINHOOD CHAIN</div><div class="v">0x6a043193D37872A958aAbbC0C7221541f5661BD0</div></div>
+    <div class="links"><b>use.orbz.app</b><br>orbz.app · @OrbzRH</div>
+  </div>
+</div>
+<script>
+  // 60 minute ticks around the dial (every 5th longer)
+  const g = document.getElementById("ticks");
+  for (let m = 0; m < 60; m++) {
+    const a = (m / 60) * 2 * Math.PI - Math.PI / 2, r1 = m % 5 === 0 ? 176 : 184, r2 = 192;
+    const l = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    l.setAttribute("x1", 260 + r1 * Math.cos(a)); l.setAttribute("y1", 260 + r1 * Math.sin(a));
+    l.setAttribute("x2", 260 + r2 * Math.cos(a)); l.setAttribute("y2", 260 + r2 * Math.sin(a));
+    l.setAttribute("stroke", "#CCB098"); l.setAttribute("stroke-opacity", m % 5 === 0 ? ".8" : ".35"); l.setAttribute("stroke-width", m % 5 === 0 ? "2.5" : "1.2");
+    g.appendChild(l);
+  }
+</script>
+</body></html>

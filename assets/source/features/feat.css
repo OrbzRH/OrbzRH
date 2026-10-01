@@ -1,0 +1,15 @@
+body { height: 900px; }
+.wrap { position: relative; height: 900px; display: grid; grid-template-columns: 1fr 760px; }
+.art { position: relative; background-size: cover; background-position: center; }
+.art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink) 0%, rgba(20,19,18,.55) 45%, rgba(20,19,18,.15) 100%); }
+.copy { position: relative; z-index: 3; padding: 92px 40px 0 96px; }
+.frame { position: absolute; inset: 28px; z-index: 4; pointer-events: none; }
+h2 { font-family: "Fraunces", serif; font-weight: 400; font-size: 76px; line-height: 1.02; letter-spacing: -0.015em; margin: 20px 0 26px; }
+h2 em { color: var(--ember); }
+p.lead { font-size: 23px; line-height: 1.6; color: var(--marble); max-width: 640px; }
+.foot { position: absolute; left: 96px; bottom: 74px; display: flex; gap: 34px; font-family: "JetBrains Mono", monospace; font-size: 16px; color: var(--vein); letter-spacing: .06em; z-index: 5; }
+.foot b { color: var(--marble-light); font-weight: 500; }
+.foot i { width: 8px; height: 8px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 12px var(--ember); align-self: center; }
+.panel { position: relative; z-index: 3; align-self: center; margin-right: 96px; background: rgba(28,26,24,.88); backdrop-filter: blur(6px); }
+.num { position: absolute; right: 96px; top: 92px; z-index: 5; }
+.mono { font-family: "JetBrains Mono", monospace; }

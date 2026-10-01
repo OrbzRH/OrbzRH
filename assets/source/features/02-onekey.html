@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../base.css"><link rel="stylesheet" href="feat.css">
+<style>
+ .panel { width: 640px; padding: 0; overflow: hidden; }
+ .bar3 { display: flex; gap: 8px; padding: 18px 22px; border-bottom: 1px solid var(--line); align-items: center; }
+ .bar3 i { width: 11px; height: 11px; border-radius: 50%; background: var(--ink-3); border: 1px solid var(--line); }
+ .bar3 span { margin-left: 12px; font-family: "JetBrains Mono", monospace; font-size: 14px; color: var(--vein); letter-spacing: .08em; }
+ pre { font-family: "JetBrains Mono", monospace; font-size: 18px; line-height: 1.75; padding: 28px 32px 34px; color: var(--marble); white-space: pre; }
+ .k { color: var(--brass); } .s { color: var(--marble-light); } .e { color: var(--ember); } .c { color: rgba(226,208,194,.45); }
+</style></head><body><div class="wrap">
+ <div class="art" style="position:absolute;inset:0;background-image:url(../art/orb.png);background-size:900px;background-position:115% 40%;background-repeat:no-repeat;opacity:.55"></div>
+ <div class="copy"><div class="eyebrow">Feature 02 · One key</div>
+  <h2>One key. <em>Zero bill.</em></h2>
+  <p class="lead">Sign in with your wallet, mint an sk-orbz key, and point any chat-completions client at Orbz Opus. Streaming supported. List price, no markup.</p></div>
+ <div class="panel plate"><i class="tick-b"></i>
+  <div class="bar3"><i></i><i></i><i></i><span>terminal</span></div>
+<pre><span class="c"># any chat-completions client</span>
+<span class="k">from</span> openai <span class="k">import</span> OpenAI
+
+client = OpenAI(
+  base_url=<span class="s">"https://api.orbz.app/v1"</span>,
+  api_key=<span class="e">"sk-orbz-..."</span>,
+)
+client.chat.completions.create(
+  model=<span class="e">"orbz-opus"</span>,
+  messages=[...],
+)</pre>
+ </div>
+ <div class="foot"><i></i><b>orbz.app</b><span>use.orbz.app</span><span>@OrbzRH</span><span>$ORBZ</span></div><div class="frame plate"><i class="tick-b"></i></div>
+</div></body></html>

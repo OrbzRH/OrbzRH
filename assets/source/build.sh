@@ -7,7 +7,7 @@ set -e
 cd "$(dirname "$0")"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 # name:height pairs (macOS ships bash 3.2, so no associative arrays)
-ALL="banner:640 pillars:620 loop:760 fuse:560 tiers:640 token:640 roadmap:520 footer:420"
+ALL="banner:640 live:900 update-30m:900 pillars:620 loop:760 fuse:560 tiers:640 token:640 roadmap:520 footer:420"
 height() { for p in $ALL; do [ "${p%%:*}" = "$1" ] && echo "${p##*:}"; done; }
 names="$*"; [ -z "$names" ] && names=$(for p in $ALL; do printf '%s ' "${p%%:*}"; done)
 for n in $names; do

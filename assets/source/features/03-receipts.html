@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../base.css"><link rel="stylesheet" href="feat.css">
+<style>
+ .panel { width: 600px; padding: 38px 42px; }
+ .line { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px dashed var(--line); font-family: "JetBrains Mono", monospace; font-size: 18px; color: var(--vein); }
+ .line b { color: var(--marble-light); font-weight: 500; }
+ .line.burn b, .line.burn span { color: var(--ember); }
+ .hd { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+ .hd h3 { font-family: "Fraunces", serif; font-weight: 400; font-size: 34px; }
+ .fmt { display: flex; gap: 10px; margin-top: 26px; }
+ .fmt span { font-family: "JetBrains Mono", monospace; font-size: 14px; letter-spacing: .14em; padding: 8px 14px; border: 1px solid var(--brass); color: var(--brass); }
+ .note { margin-top: 18px; font-family: "Fraunces", serif; font-style: italic; color: var(--vein); font-size: 16px; }
+</style></head><body><div class="wrap">
+ <div class="art" style="position:absolute;inset:0;background-image:url(../art/ledger.webp);background-position:70% 60%"></div>
+ <div class="copy"><div class="eyebrow">Feature 03 · Burn receipts</div>
+  <h2>Every burn <em>leaves a receipt.</em></h2>
+  <p class="lead">One public receipt per epoch: credit granted, spent and burned. Download it as JSON or CSV and check it against the chain yourself.</p></div>
+ <div class="panel plate"><i class="tick-b"></i>
+  <div class="hd"><h3>Receipt</h3><span class="eyebrow">sample epoch</span></div>
+  <div class="line"><span>granted</span><b>$ 1,190.00</b></div>
+  <div class="line"><span>spent on AI</span><b>$ 178.50</b></div>
+  <div class="line burn"><span>burned</span><b>$ 1,011.50</b></div>
+  <div class="line"><span>burn tx</span><b>0x…</b></div>
+  <div class="fmt"><span>JSON</span><span>CSV</span></div>
+  <div class="note">Illustrative numbers at 15% usage. Not a forecast.</div>
+ </div>
+ <div class="foot"><i></i><b>orbz.app</b><span>use.orbz.app</span><span>@OrbzRH</span><span>$ORBZ</span></div><div class="frame plate"><i class="tick-b"></i></div>
+</div></body></html>
