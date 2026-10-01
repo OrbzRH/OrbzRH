@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { height: 560px; }
+  .wrap { position: relative; height: 560px; display: grid; grid-template-columns: 720px 1fr; }
+  .img { background: url(art/fuse.webp) 62% center / cover; position: relative; }
+  .img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,19,18,0) 55%, var(--ink) 100%); }
+  .copy { padding: 64px 80px 0 40px; }
+  h2 { font-family: "Fraunces", serif; font-weight: 400; font-size: 50px; line-height: 1.05; margin: 14px 0 18px; }
+  h2 em { color: var(--ember); }
+  p { font-size: 19px; line-height: 1.6; color: var(--marble); max-width: 720px; }
+  .bar { display: flex; gap: 8px; margin: 34px 0 10px; }
+  .seg { flex: 1; height: 12px; background: linear-gradient(90deg, #e2d0c2, #fbf0e3); opacity: .85; }
+  .seg:nth-child(6) { opacity: .55; }
+  .seg:last-child { background: linear-gradient(90deg, #f18e3f, #ff7a1a); box-shadow: 0 0 18px rgba(255,122,26,.6); opacity: 1; }
+  .days { display: flex; justify-content: space-between; font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--vein); letter-spacing: .1em; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 34px; border-top: 1px solid var(--line); }
+  .facts div { padding-top: 16px; }
+  .facts b { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 30px; color: var(--marble-light); }
+  .facts span { font-family: "JetBrains Mono", monospace; font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--vein); }
+</style></head>
+<body><div class="wrap">
+  <div class="img"></div>
+  <div class="copy">
+    <div class="eyebrow">The fuse · Fig. 3</div>
+    <h2>Every credit has <em>168 hours.</em></h2>
+    <p>Each hourly grant is its own bucket with its own fuse. Spending always drains the oldest bucket first, so fresh credit is never lost to an old fuse.</p>
+    <div class="bar"><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i></div>
+    <div class="days"><span>DAY 1</span><span>DAY 2</span><span>DAY 3</span><span>DAY 4</span><span>DAY 5</span><span>DAY 6</span><span style="color:#FF7A1A">DAY 7 · BURN</span></div>
+    <div class="facts">
+      <div><b>FIFO</b><span>oldest spent first</span></div>
+      <div><b>0.25%</b><span>caller tip, max $2</span></div>
+      <div><b>3%</b><span>bound vs 30-min TWAP</span></div>
+    </div>
+  </div>
+</div></body></html>

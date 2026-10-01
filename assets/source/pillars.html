@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { height: 620px; }
+  .wrap { position: relative; height: 620px; padding: 56px 72px; }
+  .head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 34px; }
+  h2 { font-family: "Fraunces", serif; font-weight: 400; font-size: 46px; letter-spacing: -0.01em; margin-top: 12px; }
+  h2 em { color: var(--ember); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .card { background: var(--ink-2); height: 420px; overflow: hidden; display: flex; flex-direction: column; }
+  .img { height: 210px; background-size: cover; background-position: center; position: relative; }
+  .img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, var(--ink-2) 0%, rgba(28,26,24,0) 55%); }
+  .body { padding: 6px 30px 28px; }
+  .num { font-family: "JetBrains Mono", monospace; font-size: 14px; letter-spacing: .2em; color: var(--brass); }
+  h3 { font-family: "Fraunces", serif; font-weight: 600; font-size: 34px; margin: 8px 0 10px; }
+  p { font-size: 18px; line-height: 1.55; color: var(--marble); }
+  .card.burn h3 { color: var(--ember); }
+</style></head>
+<body><div class="wrap">
+  <div class="head">
+    <div><div class="eyebrow">What happens to a credit</div><h2>Three outcomes. None of them is <em>dumped.</em></h2></div>
+    <div class="fig">Fig. 1</div>
+  </div>
+  <div class="grid">
+    <div class="card plate"><i class="tick-b"></i>
+      <div class="img" style="background-image:url(art/vault.webp)"></div>
+      <div class="body"><div class="num">01 · HOLD</div><h3>Credits arrive</h3>
+        <p>Every hour, trading fees in OrbzVault become credits, shared pro-rata to your time-weighted balance. No staking, no claim.</p></div>
+    </div>
+    <div class="card plate"><i class="tick-b"></i>
+      <div class="img" style="background-image:url(art/ledger.webp)"></div>
+      <div class="body"><div class="num">02 · USE</div><h3>Free AI</h3>
+        <p>One API key reaches every major model. A $1.00 credit buys exactly $1.00 of usage at list price, no markup.</p></div>
+    </div>
+    <div class="card plate burn"><i class="tick-b"></i>
+      <div class="img" style="background-image:url(art/furnace.webp)"></div>
+      <div class="body"><div class="num">03 · SKIP</div><h3>It burns</h3>
+        <p>Credit left idle for 168 hours buys $ORBZ back and burns it on-chain, with a public receipt for every burn.</p></div>
+    </div>
+  </div>
+</div></body></html>

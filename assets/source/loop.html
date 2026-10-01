@@ -1,0 +1,77 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { height: 760px; }
+  .wrap { position: relative; width: 1600px; height: 760px;
+    background: radial-gradient(ellipse at 70% 40%, #1f1b18 0%, var(--ink) 70%); }
+  .head { position: absolute; left: 101px; right: 101px; top: 52px; display: flex; justify-content: space-between; align-items: end; }
+  h2 { font-family: "Fraunces", serif; font-weight: 400; font-size: 44px; margin-top: 12px; }
+  .node { position: absolute; width: 300px; height: 148px; padding: 20px 24px; background: var(--ink-2); }
+  .node .k { font-family: "JetBrains Mono", monospace; font-size: 13px; letter-spacing: .18em; color: var(--brass); text-transform: uppercase; }
+  .node .t { font-family: "Fraunces", serif; font-weight: 600; font-size: 27px; margin: 6px 0 6px; }
+  .node .d { font-size: 15.5px; line-height: 1.45; color: var(--muted); }
+  .node.hot { border-color: rgba(255,122,26,.55); background: linear-gradient(160deg, #2a1a10 0%, var(--ink-2) 70%); }
+  .node.hot .t { color: var(--ember); }
+  .node.hot::before, .node.hot::after, .node.hot > .tick-b::before, .node.hot > .tick-b::after { border-color: var(--ember); }
+  svg { position: absolute; inset: 0; }
+  .lbl { font-family: "JetBrains Mono", monospace; font-size: 13.5px; fill: var(--vein); letter-spacing: .04em; }
+  .lbl.e { fill: var(--ember-glow); }
+  .strip { position: absolute; left: 101px; right: 101px; bottom: 44px; height: 84px; display: flex; align-items: center;
+    border-top: 1px solid var(--line); gap: 0; }
+  .strip .c { flex: 1; padding-top: 14px; }
+  .strip .c .v { font-family: "Fraunces", serif; font-size: 30px; }
+  .strip .c .n { font-family: "JetBrains Mono", monospace; font-size: 12.5px; letter-spacing: .14em; color: var(--vein); text-transform: uppercase; margin-top: 2px; }
+  .strip .lead { flex: 1.25; font-family: "Fraunces", serif; font-style: italic; font-size: 19px; color: var(--marble); padding-top: 14px; }
+</style></head>
+<body><div class="wrap">
+  <div class="head">
+    <div><div class="eyebrow">The loop</div><h2>From a trade to a credit to a burn.</h2></div>
+    <div class="fig">Fig. 2 · per hourly epoch</div>
+  </div>
+
+  <svg width="1600" height="760" viewBox="0 0 1600 760">
+    <defs>
+      <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#BD8E6B"/></marker>
+      <marker id="e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF7A1A"/></marker>
+    </defs>
+    <g stroke="#BD8E6B" stroke-width="1.6" fill="none">
+      <line x1="403" y1="262" x2="463" y2="262" marker-end="url(#a)"/>
+      <line x1="769" y1="262" x2="829" y2="262" marker-end="url(#a)"/>
+      <line x1="1135" y1="262" x2="1195" y2="262" marker-end="url(#a)"/>
+      <line x1="617" y1="336" x2="617" y2="436" marker-end="url(#a)"/>
+      <line x1="1400" y1="336" x2="1400" y2="436" marker-end="url(#a)"/>
+    </g>
+    <path d="M1290,336 L1290,388 L983,388 L983,436" stroke="#FF7A1A" stroke-width="1.6" fill="none" stroke-dasharray="5 5" marker-end="url(#e)"/>
+    <text class="lbl" x="404" y="250">2% fee</text>
+    <text class="lbl" x="772" y="250">70%</text>
+    <text class="lbl" x="1140" y="250">hourly</text>
+    <text class="lbl" x="628" y="392">30%</text>
+    <text class="lbl" x="1410" y="392">spent</text>
+    <text class="lbl e" x="1010" y="378">idle 168 hours</text>
+  </svg>
+
+  <div class="node plate" style="left:101px;top:190px"><i class="tick-b"></i>
+    <div class="k">Step 1</div><div class="t">Trade $ORBZ</div><div class="d">On the curve or the pool. 1% base + 1% creator tax.</div></div>
+  <div class="node plate" style="left:467px;top:190px"><i class="tick-b"></i>
+    <div class="k">Step 2</div><div class="t">OrbzVault</div><div class="d">Receives 1.7% of volume. No owner, no upgrade.</div></div>
+  <div class="node plate" style="left:833px;top:190px"><i class="tick-b"></i>
+    <div class="k">Step 3</div><div class="t">Credit pool</div><div class="d">USDG, booked per hourly epoch.</div></div>
+  <div class="node plate" style="left:1199px;top:190px"><i class="tick-b"></i>
+    <div class="k">Step 4</div><div class="t">Holders</div><div class="d">Pro-rata to time-weighted balance. Floor 100,000 $ORBZ.</div></div>
+
+  <div class="node plate" style="left:467px;top:440px;height:164px"><i class="tick-b"></i>
+    <div class="k">30% of the vault</div><div class="t">Treasury</div><div class="d">Operations, provider float, free demo, growth, reserve.</div></div>
+  <div class="node plate hot" style="left:833px;top:440px;height:164px"><i class="tick-b"></i>
+    <div class="k">burnExpired()</div><div class="t">Buyback + burn</div><div class="d">USDG → ETH → $ORBZ → burn. Anyone can call it. Receipt published.</div></div>
+  <div class="node plate" style="left:1199px;top:440px;height:164px"><i class="tick-b"></i>
+    <div class="k">Used</div><div class="t">AI usage</div><div class="d">The pool pays the model provider at list price.</div></div>
+
+  <div class="strip">
+    <div class="lead">Per $100,000 of volume</div>
+    <div class="c"><div class="v">$2,000</div><div class="n">fees paid</div></div>
+    <div class="c"><div class="v">$300</div><div class="n">launchpad</div></div>
+    <div class="c"><div class="v">$1,700</div><div class="n">OrbzVault</div></div>
+    <div class="c"><div class="v">$1,190</div><div class="n">credit pool</div></div>
+    <div class="c"><div class="v">$510</div><div class="n">treasury</div></div>
+  </div>
+</div></body></html>

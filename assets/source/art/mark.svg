@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<mask id="fr" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+<rect width="512" height="512" fill="#fff"/>
+<path d="M -206.0 0 A 206.0 64.0 0 0 0 206.0 0" transform="translate(256.0 279.97920391637604) rotate(-35.0)" fill="none" stroke="#000" stroke-width="36" stroke-linecap="round"/><circle cx="362.0" cy="155.7" r="25.0" fill="#000"/>
+</mask>
+<mask id="bk" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+<rect width="512" height="512" fill="#fff"/>
+<circle cx="231.33621323690502" cy="244.75566601194942" r="160.0" fill="#000"/>
+<circle cx="231.33621323690502" cy="244.75566601194942" r="54.0" fill="#fff"/><circle cx="362.0" cy="155.7" r="25.0" fill="#000"/>
+</mask>
+</defs>
+<g mask="url(#bk)"><path d="M -206.0 0 A 206.0 64.0 0 0 1 206.0 0" transform="translate(256.0 279.97920391637604) rotate(-35.0)" fill="none" stroke="#BD8E6B" stroke-width="16" stroke-linecap="round"/></g>
+<path d="M 81.33621323690502 244.75566601194942 a 150.0 150.0 0 1 0 300.0 0 a 150.0 150.0 0 1 0 -300.0 0 Z M 167.33621323690502 244.75566601194942 a 64.0 64.0 0 1 0 128.0 0 a 64.0 64.0 0 1 0 -128.0 0 Z" fill="#FBF0E3" fill-rule="evenodd" mask="url(#fr)"/>
+<path d="M -206.0 0 A 206.0 64.0 0 0 0 206.0 0" transform="translate(256.0 279.97920391637604) rotate(-35.0)" fill="none" stroke="#BD8E6B" stroke-width="16" stroke-linecap="round"/>
+<circle cx="362.0" cy="155.7" r="15" fill="#FF7A1A"/>
+</svg>

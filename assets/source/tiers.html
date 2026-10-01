@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { height: 640px; }
+  .wrap { height: 640px; padding: 56px 72px; background: radial-gradient(ellipse at 50% 0%, #201c19 0%, var(--ink) 65%); }
+  .head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 36px; }
+  h2 { font-family: "Fraunces", serif; font-weight: 400; font-size: 44px; margin-top: 12px; }
+  .note { font-size: 17px; color: var(--muted); margin-top: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .card { background: var(--ink-2); padding: 28px 28px 30px; height: 392px; }
+  .icon { height: 74px; margin-bottom: 14px; }
+  h3 { font-family: "Fraunces", serif; font-weight: 600; font-size: 34px; }
+  .hold { font-family: "JetBrains Mono", monospace; font-size: 15px; color: var(--brass); margin: 6px 0 18px; letter-spacing: .04em; }
+  ul { list-style: none; }
+  li { font-size: 16.5px; line-height: 1.45; color: var(--marble); padding: 7px 0; border-top: 1px solid rgba(189,142,107,.14); }
+  .card.sun { background: linear-gradient(170deg, #2b1b10 0%, var(--ink-2) 60%); border-color: rgba(255,122,26,.5); }
+  .card.sun h3 { color: var(--ember); }
+</style></head>
+<body><div class="wrap">
+  <div class="head">
+    <div><div class="eyebrow">The orbit system</div><h2>Four tiers. Allocation stays pro-rata.</h2>
+      <div class="note">Tiers only raise rate limits and unlock cosmetic badges. Credits always follow your share.</div></div>
+    <div class="fig">Fig. 4</div>
+  </div>
+  <div class="grid">
+    <div class="card plate"><i class="tick-b"></i>
+      <svg class="icon" viewBox="0 0 80 74"><circle cx="40" cy="37" r="9" fill="none" stroke="#CCB098" stroke-width="2"/></svg>
+      <h3>Visitor</h3><div class="hold">0 $ORBZ</div>
+      <ul><li>20 demo messages a day</li><li>Receipts, reserves, docs</li></ul></div>
+    <div class="card plate"><i class="tick-b"></i>
+      <svg class="icon" viewBox="0 0 80 74"><circle cx="40" cy="37" r="9" fill="#E2D0C2"/><ellipse cx="40" cy="37" rx="30" ry="11" fill="none" stroke="#BD8E6B" stroke-width="2" transform="rotate(-20 40 37)"/></svg>
+      <h3>Orbit</h3><div class="hold">100,000 $ORBZ · 0.01%</div>
+      <ul><li>Hourly credit grants</li><li>60 requests/min, 8 concurrent</li><li>Usage and fuse dashboard</li></ul></div>
+    <div class="card plate"><i class="tick-b"></i>
+      <svg class="icon" viewBox="0 0 80 74"><circle cx="40" cy="37" r="9" fill="#E2D0C2"/><ellipse cx="40" cy="37" rx="30" ry="11" fill="none" stroke="#BD8E6B" stroke-width="2" transform="rotate(-20 40 37)"/><ellipse cx="40" cy="37" rx="37" ry="17" fill="none" stroke="#BD8E6B" stroke-width="1.4" opacity=".6" transform="rotate(25 40 37)"/></svg>
+      <h3>Ring</h3><div class="hold">1,000,000 $ORBZ · 0.1%</div>
+      <ul><li>Everything in Orbit</li><li>120 requests/min, 16 concurrent</li><li>Ring badge</li></ul></div>
+    <div class="card plate sun"><i class="tick-b"></i>
+      <svg class="icon" viewBox="0 0 80 74"><circle cx="40" cy="37" r="20" fill="#FF7A1A" opacity=".18"/><circle cx="40" cy="37" r="11" fill="#FF7A1A"/><ellipse cx="40" cy="37" rx="34" ry="13" fill="none" stroke="#BD8E6B" stroke-width="2" transform="rotate(-20 40 37)"/></svg>
+      <h3>Sun</h3><div class="hold">10,000,000 $ORBZ · 1%</div>
+      <ul><li>Everything in Ring</li><li>240 requests/min, 32 concurrent</li><li>First look at new models</li><li>Holder wall</li></ul></div>
+  </div>
+</div></body></html>

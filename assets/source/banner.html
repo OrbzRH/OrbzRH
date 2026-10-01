@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { height: 640px; }
+  .wrap { position: relative; width: 1600px; height: 640px; overflow: hidden; }
+  .bg { position: absolute; inset: 0; background: url(art/hero.webp) center 62% / cover; }
+  .shade { position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(20,19,18,.97) 0%, rgba(20,19,18,.9) 34%, rgba(20,19,18,.35) 62%, rgba(20,19,18,.15) 100%),
+                linear-gradient(0deg, rgba(20,19,18,.85) 0%, rgba(20,19,18,0) 30%); }
+  .glow { position: absolute; right: 150px; top: 70px; width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,122,26,.20) 0%, rgba(255,122,26,0) 65%); }
+  .orb { position: absolute; right: 120px; top: 40px; width: 560px; height: 560px;
+    background: url(art/orb.png) center / contain no-repeat; filter: drop-shadow(0 30px 60px rgba(0,0,0,.6)); }
+  .frame { position: absolute; inset: 28px; }
+  .copy { position: absolute; left: 96px; top: 112px; width: 760px; }
+  .copy .eyebrow { margin-bottom: 26px; }
+  h1 { font-family: "Fraunces", serif; font-weight: 600; font-size: 132px; line-height: .9; letter-spacing: -0.03em; }
+  h1 span { font-weight: 400; font-style: italic; color: var(--brass); font-size: 64px; letter-spacing: 0; margin-left: 18px; vertical-align: 14px; }
+  .tag { font-family: "Fraunces", serif; font-style: italic; font-size: 46px; margin-top: 26px; color: var(--marble-light); }
+  .tag em { color: var(--ember); font-style: italic; }
+  .sub { font-size: 21px; line-height: 1.55; color: var(--marble); margin-top: 22px; max-width: 620px; }
+  .foot { position: absolute; left: 96px; right: 96px; bottom: 62px; display: flex; gap: 36px; align-items: center;
+    font-family: "JetBrains Mono", monospace; font-size: 15px; letter-spacing: .08em; color: var(--vein); }
+  .foot b { color: var(--marble-light); font-weight: 500; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 12px var(--ember); }
+</style></head>
+<body><div class="wrap grain">
+  <div class="bg"></div><div class="shade"></div><div class="glow"></div><div class="orb"></div>
+  <div class="frame plate"><i class="tick-b"></i></div>
+  <div class="copy">
+    <div class="eyebrow">AI credits from trading fees · Robinhood Chain</div>
+    <h1>Orbz<span>$ORBZ</span></h1>
+    <div class="tag">Use it, or it <em>burns.</em></div>
+    <div class="sub">Hold $ORBZ and trading fees pay for your AI every hour. Credits nobody uses for seven days buy $ORBZ back and burn it.</div>
+  </div>
+  <div class="foot">
+    <span class="dot"></span><b>orbz.app</b><span>use.orbz.app</span><span>@OrbzRH</span><span>chain 4663</span>
+  </div>
+</div></body></html>

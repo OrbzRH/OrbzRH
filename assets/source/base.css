@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=block");
+
+:root {
+  --ink: #141312;
+  --ink-2: #1c1a18;
+  --ink-3: #26221f;
+  --marble-light: #fbf0e3;
+  --marble: #e2d0c2;
+  --vein: #ccb098;
+  --brass: #bd8e6b;
+  --brass-deep: #804c2f;
+  --ember: #ff7a1a;
+  --ember-glow: #f18e3f;
+  --line: rgba(189, 142, 107, 0.28);
+  --muted: rgba(226, 208, 194, 0.62);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 1600px;
+  background: var(--ink);
+  color: var(--marble-light);
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.serif { font-family: "Fraunces", serif; font-optical-sizing: auto; }
+.mono { font-family: "JetBrains Mono", monospace; }
+.ember { color: var(--ember); }
+.brass { color: var(--brass); }
+.muted { color: var(--muted); }
+
+/* drafting plate: a hairline frame with brass corner ticks */
+.plate { position: relative; border: 1px solid var(--line); }
+.plate::before, .plate::after,
+.plate > .tick-b::before, .plate > .tick-b::after {
+  content: ""; position: absolute; width: 18px; height: 18px; border-color: var(--brass); border-style: solid; z-index: 2;
+}
+.plate::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.plate::after { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+.plate > .tick-b::before { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+.plate > .tick-b::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.eyebrow {
+  font-family: "JetBrains Mono", monospace; font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brass);
+}
+.fig {
+  font-family: "Fraunces", serif; font-style: italic; font-size: 17px; color: var(--vein);
+}
+.grain::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.06;
+  background-image: radial-gradient(rgba(255,255,255,.6) 1px, transparent 1px); background-size: 3px 3px;
+}

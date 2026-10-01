@@ -1,0 +1,34 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { height: 640px; }
+  .wrap { position: relative; height: 640px; display: grid; grid-template-columns: 1fr 660px; }
+  .copy { padding: 58px 40px 0 80px; }
+  h2 { font-family: "Fraunces", serif; font-weight: 400; font-size: 46px; margin: 12px 0 8px; }
+  .big { font-family: "Fraunces", serif; font-weight: 600; font-size: 64px; letter-spacing: -0.02em; margin-top: 18px; }
+  .big small { font-family: "JetBrains Mono", monospace; font-weight: 400; font-size: 15px; letter-spacing: .16em; color: var(--brass); margin-left: 14px; vertical-align: 14px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+  td { padding: 12px 0; border-top: 1px solid rgba(189,142,107,.18); font-size: 18px; vertical-align: top; }
+  td:first-child { width: 230px; font-family: "JetBrains Mono", monospace; font-size: 13.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--vein); padding-top: 15px; }
+  td b { font-weight: 600; color: var(--marble-light); }
+  .status { display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 13px; letter-spacing: .14em;
+    color: var(--ember); border: 1px solid rgba(255,122,26,.6); padding: 4px 10px; }
+  .img { background: url(art/vault.webp) 46% center / cover; position: relative; }
+  .img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink) 0%, rgba(20,19,18,0) 30%); }
+</style></head>
+<body><div class="wrap">
+  <div class="copy">
+    <div class="eyebrow">Token at a glance · Fig. 5</div>
+    <h2>A fair launch. A vault nobody owns.</h2>
+    <div class="big">1,000,000,000<small>$ORBZ · FIXED · NO MINT</small></div>
+    <table>
+      <tr><td>Launch</td><td><b>100% fair launch</b> on the Robinhood Chain launchpad bonding curve</td></tr>
+      <tr><td>Graduation</td><td>Uniswap v4 pool at the launchpad threshold (4.2 ETH)</td></tr>
+      <tr><td>Team · presale</td><td><b>None.</b> No team allocation, no presale, no private round</td></tr>
+      <tr><td>Dev buy</td><td>At most 2% of supply, disclosed with the wallet before launch</td></tr>
+      <tr><td>Fee recipient</td><td><b>OrbzVault</b> from block one: no owner, no upgrade, source verified</td></tr>
+      <tr><td>Status</td><td><span class="status">NOT LAUNCHED · NO CA YET</span></td></tr>
+    </table>
+  </div>
+  <div class="img"></div>
+</div></body></html>
